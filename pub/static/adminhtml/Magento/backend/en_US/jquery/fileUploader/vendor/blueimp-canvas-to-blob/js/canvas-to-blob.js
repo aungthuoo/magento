@@ -1,0 +1,1 @@
+/var/www/magento2s/lib/web/jquery/fileUploader/vendor/blueimp-canvas-to-blob/js/canvas-to-blob.js

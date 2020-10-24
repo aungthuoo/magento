@@ -1,0 +1,1 @@
+/var/www/magento2s/lib/web/jquery/fileUploader/jquery.iframe-transport.js

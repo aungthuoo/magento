@@ -1,0 +1,1 @@
+/var/www/magento2s/vendor/magento/module-paypal/view/adminhtml/web/js/solution.js

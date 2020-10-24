@@ -1,0 +1,1 @@
+/var/www/magento2s/lib/web/jquery/ui-modules/effect-scale.js

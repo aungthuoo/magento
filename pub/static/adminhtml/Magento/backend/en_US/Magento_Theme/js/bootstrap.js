@@ -1,0 +1,1 @@
+/var/www/magento2s/vendor/magento/module-theme/view/adminhtml/web/js/bootstrap.js

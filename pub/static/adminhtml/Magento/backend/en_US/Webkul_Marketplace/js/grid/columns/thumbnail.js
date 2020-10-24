@@ -1,0 +1,1 @@
+/var/www/magento2s/app/code/Webkul/Marketplace/view/base/web/js/grid/columns/thumbnail.js

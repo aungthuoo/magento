@@ -1,0 +1,1 @@
+/var/www/magento2s/vendor/magento/module-variable/view/base/web/js/grid/columns/radioselect.js
