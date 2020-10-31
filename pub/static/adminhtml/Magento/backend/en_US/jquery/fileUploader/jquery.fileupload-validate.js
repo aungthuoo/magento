@@ -1,1 +1,0 @@
-/var/www/magento2s/lib/web/jquery/fileUploader/jquery.fileupload-validate.js

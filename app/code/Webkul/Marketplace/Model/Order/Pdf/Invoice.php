@@ -27,6 +27,10 @@ class Invoice extends \Magento\Sales\Model\Order\Pdf\Invoice
     protected $_string;
 
     /**
+     * @var \Magento\Store\Model\App\Emulation 
+     */
+    protected $appEmulation;
+    /**
      * @param \Webkul\Marketplace\Helper\Data                      $helper
      * @param \Magento\Payment\Helper\Data                         $paymentData
      * @param \Magento\Framework\Stdlib\StringUtils                $string
@@ -39,7 +43,7 @@ class Invoice extends \Magento\Sales\Model\Order\Pdf\Invoice
      * @param \Magento\Framework\Translate\Inline\StateInterface   $inlineTranslation
      * @param \Magento\Sales\Model\Order\Address\Renderer          $addressRenderer
      * @param \Magento\Store\Model\StoreManagerInterface           $storeManager
-     * @param \Magento\Framework\Locale\ResolverInterface          $localeResolver
+     * @param \Magento\Store\Model\App\Emulation                   $appEmulation
      * @param array                                                $data
      *
      * @SuppressWarnings(PHPMD.ExcessiveParameterList)
@@ -57,11 +61,12 @@ class Invoice extends \Magento\Sales\Model\Order\Pdf\Invoice
         \Magento\Framework\Translate\Inline\StateInterface $inlineTranslation,
         \Magento\Sales\Model\Order\Address\Renderer $addressRenderer,
         \Magento\Store\Model\StoreManagerInterface $storeManager,
-        \Magento\Framework\Locale\ResolverInterface $localeResolver,
+        \Magento\Store\Model\App\Emulation $appEmulation,
         array $data = []
     ) {
         $this->helper = $helper;
         $this->_string = $string;
+        $this->appEmulation = $appEmulation;
         parent::__construct(
             $paymentData,
             $string,
@@ -74,7 +79,7 @@ class Invoice extends \Magento\Sales\Model\Order\Pdf\Invoice
             $inlineTranslation,
             $addressRenderer,
             $storeManager,
-            $localeResolver,
+            $appEmulation,
             $data
         );
     }
@@ -105,12 +110,12 @@ class Invoice extends \Magento\Sales\Model\Order\Pdf\Invoice
 
         foreach ($sellerinvoices as $sellerinvoice) {
             if ($sellerinvoice->getStoreId()) {
-                $this->_localeResolver->emulate(
-                    $sellerinvoice->getStoreId()
+                $this->appEmulation->startEnvironmentEmulation(
+                    $sellerinvoice->getStoreId(),
+                    \Magento\Framework\App\Area::AREA_FRONTEND,
+                    true
                 );
-                $this->_storeManager->setCurrentStore(
-                    $sellerinvoice->getStoreId()
-                );
+                $this->_storeManager->setCurrentStore($sellerinvoice->getStoreId());
             }
             $sellerPage = $this->newPage();
             $sellerOrder = $sellerinvoice->getOrder();
@@ -153,7 +158,7 @@ class Invoice extends \Magento\Sales\Model\Order\Pdf\Invoice
                 $sellerinvoice
             );
             if ($sellerinvoice->getStoreId()) {
-                $this->_localeResolver->revert();
+                $this->appEmulation->stopEnvironmentEmulation();
             }
         }
         $this->_afterGetPdf();

@@ -1,0 +1,1 @@
+/var/www/magento2s/vendor/magento/module-user/view/adminhtml/web/js/delete-user-account.js

@@ -1,0 +1,1 @@
+/var/www/magento2s/app/code/Webkul/Marketplace/view/frontend/web/js/product/related-product.js

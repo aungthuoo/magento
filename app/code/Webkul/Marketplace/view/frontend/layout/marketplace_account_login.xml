@@ -60,7 +60,7 @@
                     <argument name="width" xsi:type="string">50</argument>
                 </action>
             </block>
-            <block class="MSP\ReCaptcha\Block\Frontend\ReCaptcha" name="msp-recaptcha" after="-"
+            <!-- <block class="MSP\ReCaptcha\Block\Frontend\ReCaptcha" name="msp-recaptcha" after="-"
                    template="MSP_ReCaptcha::msp_recaptcha.phtml">
                 <arguments>
                     <argument name="jsLayout" xsi:type="array">
@@ -72,7 +72,7 @@
                         </item>
                     </argument>
                 </arguments>
-            </block>
+            </block> -->
         </referenceContainer>
         <referenceBlock name="head.components">
             <block class="Magento\Framework\View\Element\Js\Components" name="captcha_page_head_components" template="Magento_Captcha::js/components.phtml"/>

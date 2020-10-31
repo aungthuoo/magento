@@ -41,7 +41,7 @@ class Shipment extends \Magento\Sales\Model\Order\Pdf\Shipment
      * @param \Magento\Framework\Translate\Inline\StateInterface   $inlineTranslation
      * @param \Magento\Sales\Model\Order\Address\Renderer          $addressRenderer
      * @param \Magento\Store\Model\StoreManagerInterface           $storeManager
-     * @param \Magento\Framework\Locale\ResolverInterface          $localeResolver
+     * @param \Magento\Store\Model\App\Emulation                   $appEmulation
      * @param array                                                $data
      *
      * @SuppressWarnings(PHPMD.ExcessiveParameterList)
@@ -59,7 +59,7 @@ class Shipment extends \Magento\Sales\Model\Order\Pdf\Shipment
         \Magento\Framework\Translate\Inline\StateInterface $inlineTranslation,
         \Magento\Sales\Model\Order\Address\Renderer $addressRenderer,
         \Magento\Store\Model\StoreManagerInterface $storeManager,
-        \Magento\Framework\Locale\ResolverInterface $localeResolver,
+        \Magento\Store\Model\App\Emulation $appEmulation,
         array $data = []
     ) {
         $this->helper = $helper;
@@ -76,7 +76,7 @@ class Shipment extends \Magento\Sales\Model\Order\Pdf\Shipment
             $inlineTranslation,
             $addressRenderer,
             $storeManager,
-            $localeResolver,
+            $appEmulation,
             $data
         );
     }

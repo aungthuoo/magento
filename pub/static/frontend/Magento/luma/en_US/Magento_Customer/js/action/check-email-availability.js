@@ -1,0 +1,1 @@
+/var/www/magento2s/vendor/magento/module-customer/view/frontend/web/js/action/check-email-availability.js

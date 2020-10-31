@@ -1,0 +1,1 @@
+/var/www/magento2s/vendor/magento/module-tax/view/frontend/web/js/view/checkout/summary/subtotal.js

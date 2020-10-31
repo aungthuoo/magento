@@ -1,0 +1,1 @@
+/var/www/magento2s/vendor/magento/module-customer/view/adminhtml/web/edit/post-wrapper.js

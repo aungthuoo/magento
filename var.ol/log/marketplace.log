@@ -1,0 +1,5 @@
+[2020-10-25 11:47:42] marketplace.INFO: Controller_Account_EditProfilePost execute : The file was not uploaded. [] []
+[2020-10-25 11:47:42] marketplace.INFO: Controller_Account_EditProfilePost execute : The file was not uploaded. [] []
+[2020-10-25 11:48:25] marketplace.INFO: Controller_Account_EditProfilePost execute : The file was not uploaded. [] []
+[2020-10-25 11:48:25] marketplace.INFO: Controller_Account_EditProfilePost execute : Warning: move_uploaded_file(/var/www/magento2s/pub/media/avatar/Food_Mall_Logo.jpg): failed to open stream: Permission denied in /var/www/magento2s/vendor/magento/framework/File/Uploader.php on line 323 [] []
+[2020-10-26 14:49:35] marketplace.INFO: Controller_Product_Save execute : Impossible to process constructor argument Parameter #0 [ <required> Magento\CatalogRule\Model\ResourceModel\RuleFactory $ruleFactory ] of Magento\Catalog\Model\Product\Type\Price class [] []

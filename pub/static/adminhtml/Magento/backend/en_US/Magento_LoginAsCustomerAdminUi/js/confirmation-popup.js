@@ -1,0 +1,1 @@
+/var/www/magento2s/vendor/magento/module-login-as-customer-admin-ui/view/adminhtml/web/js/confirmation-popup.js

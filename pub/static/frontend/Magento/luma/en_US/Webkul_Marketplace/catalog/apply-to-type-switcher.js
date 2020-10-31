@@ -1,0 +1,1 @@
+/var/www/magento2s/app/code/Webkul/Marketplace/view/frontend/web/catalog/apply-to-type-switcher.js
